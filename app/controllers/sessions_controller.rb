@@ -1,6 +1,7 @@
 class SessionsController < ApplicationController
   def new
     # //duvida
+    # deveria ser     redirect_to user_contacts_path(current_user) if user_signed_in?
     redirect_to contacts_path(current_user) if user_signed_in?
   end
 
